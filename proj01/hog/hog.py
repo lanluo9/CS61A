@@ -173,8 +173,9 @@ def play(strategy0, strategy1, score0=0, score1=0, dice=six_sided,
     # BEGIN PROBLEM 5
     nroll0 = strategy0(score0, score1)
     gain0 = roll_dice(num_rolls, dice=six_sided)
-    score0 = score0 + gain0 # does strategy1 depend on new score0?
+    score0 = score0 + gain0 # does strategy1 depend on new score0? guessing yes
     
+    who = next_player(who)
     nroll1 = strategy1(score0, score1)
     
     
